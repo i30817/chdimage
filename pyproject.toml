@@ -1,3 +1,19 @@
 [build-system]
 requires = ["maturin>=0.13,<0.14"]
 build-backend = "maturin"
+
+[project]
+name = "chdimage"
+description = "Python bindings to the chdimage part of https://github.com/Manorhos/imageparse"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+keywords = ["chd", "cd", "parser", "decompression", "delta encoding", "checksum"]
+classifiers = [
+    "Programming Language :: Rust",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS :: MacOS X",
+]
+
+[project.urls]
+repository = "https://github.com/i30817/chdimage"
