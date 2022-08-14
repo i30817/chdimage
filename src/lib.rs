@@ -179,12 +179,10 @@ impl MsfIndex {
         self.0.to_bcd_values()
     }
     fn __str__(&self) -> String {
-        let (m, s, f) = self.0.to_bcd_values();
-        format!("{}:{}:{}", m, s, f)
+        format!("MsfIndex{}", self.0)
     }
     fn __repr__(&self) -> String {
-        let (m, s, f) = self.0.to_bcd_values();
-        format!("MsfIndex({},{},{})", m, s, f)
+        format!("MsfIndex{}", self.0)
     }
     fn __richcmp__(&self, other: &Self, op: CompareOp) -> bool {
         match op {
