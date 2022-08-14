@@ -1,9 +1,7 @@
 [package]
 name = "chdimage"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
-description = "Python bindings to the chdimage part of https://github.com/Manorhos/imageparse"
-repository = "https://github.com/i30817/chdimage"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -11,16 +9,6 @@ repository = "https://github.com/i30817/chdimage"
 imageparse = { version = "0.1.0", git = "https://github.com/Manorhos/imageparse" }
 #imageparse = { version = "0.1.0", path = "../imageparse" }
 pyo3 = { version = "0.16", features = ["extension-module", "abi3-py38"] }
-
-[package.metadata.maturin]
-classifier = [
-    "Programming Language :: Rust",
-    "Operating System :: POSIX :: Linux",
-    "Operating System :: Microsoft :: Windows",
-    "Operating System :: MacOS :: MacOS X",
-]
-
-requires-python = ">=3.8"
 
 [lib]
 name = "chdimage"
