@@ -91,6 +91,9 @@ impl TrackType {
             _ => unreachable!(),
         }
     }
+    fn __repr__(&self) -> String {
+        self.__str__()
+    }
     fn __richcmp__(&self, other: PyRef<Event>, op: CompareOp) -> Py<PyAny> {
         let py = other.py();
         match op {
@@ -131,6 +134,9 @@ impl Event {
             Event(2) => "EndOfDisc".to_string(),
             _ => unreachable!(),
         }
+    }
+    fn __repr__(&self) -> String {
+        self.__str__()
     }
     fn __richcmp__(&self, other: PyRef<Event>, op: CompareOp) -> Py<PyAny> {
         let py = other.py();
